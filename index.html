@@ -43,46 +43,6 @@
 </head>
 <body>
 
-<!--<nav class="navbar" role="navigation" aria-label="main navigation">-->
-<!--  <div class="navbar-brand">-->
-<!--    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">-->
-<!--      <span aria-hidden="true"></span>-->
-<!--      <span aria-hidden="true"></span>-->
-<!--      <span aria-hidden="true"></span>-->
-<!--    </a>-->
-<!--  </div>-->
-<!--  <div class="navbar-menu">-->
-<!--    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">-->
-<!--      <a class="navbar-item" href="https://keunhong.com">-->
-<!--      <span class="icon">-->
-<!--          <i class="fas fa-home"></i>-->
-<!--      </span>-->
-<!--      </a>-->
-
-<!--      <div class="navbar-item has-dropdown is-hoverable">-->
-<!--        <a class="navbar-link">-->
-<!--          More Research-->
-<!--        </a>-->
-<!--        <div class="navbar-dropdown">-->
-<!--          <a class="navbar-item" href="https://hypernerf.github.io">-->
-<!--            HyperNeRF-->
-<!--          </a>-->
-<!--          <a class="navbar-item" href="https://nerfies.github.io">-->
-<!--            Nerfies-->
-<!--          </a>-->
-<!--          <a class="navbar-item" href="https://latentfusion.github.io">-->
-<!--            LatentFusion-->
-<!--          </a>-->
-<!--          <a class="navbar-item" href="https://photoshape.github.io">-->
-<!--            PhotoShape-->
-<!--          </a>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </div>-->
-
-<!--  </div>-->
-<!--</nav>-->
-
 
 <section class="hero">
   <div class="hero-body">
@@ -155,13 +115,12 @@
       <h2 class="subtitle has-text-centered">
         Each 100-150MB mesh consists of 450k-500k vertices, 800k-1000k faces and 8k uv texture map.
       </h2>
-      <h2 class="subtitle has-text-centered">
-        Subject IDs are not separated precisely yet.
-      </h2>
       <h2 class="subtitle has-text-centered"> </h2>
     </div>
   </div>
 </section>
+<br/>
+<br/>
 
 <section class="hero">
   <div class="container is-max-desktop">
@@ -180,15 +139,15 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Polygom present the first dataset of Korean body scan reconstructed by Multiview-Stereo with 130 DSLR system. The dataset contains high fidelity body scans and corresponding 130 camera poses from SfM.
-            The dataset is not publicly available but you can contact by E-mail for potential uses.
+            We, Polygom construct the first largest dataset of Korean body scan reconstructed by Multiview-Stereo with 130 DSLR system. The dataset contains high fidelity body meshes and corresponding 130 camera poses from SfM.
+            As preventing undesired issues (e.g. privacy), the dataset is not freely available. we are plan to provide it only after contact. If you are interested in our data, please can contact via E-mail belows.
           </p>
           <p>
             Each mesh consists of 450k-500k vertices, 800k-1000k faces and 8192x8192 uv texture map. Unfortunately, subject IDs and pose IDs were not structured at data capture stage so exact statistics about data composition are not provided.
             Roughly 20-30 pre-selected poses are included.
           </p>
           <p>
-            Additionally, we will provide SMPLX template meshes fitted on our meshes
+            Optionally for enhancing researches, we can provide SMPLX and FLAME template meshes fitted on our meshes.
           </p>
         </div>
       </div>
@@ -201,25 +160,42 @@
 
 <section class="section">
   <div class="container is-max-desktop">
-    <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
+
+      <div class="column is-centered has-text-centered">
         <h2 class="title is-3">Detail View</h2>
         <div class="content has-text-justified">
+          <h3 class="title is-4">Aligned Rendering</h3>
           <img src="./static/images/example1.png" width="100%"/>
           <img src="./static/images/example2.png" width="100%"/>
           <img src="./static/images/example3.png" width="100%"/>
         </div>
       </div>
+    <br/>
+        <br/>
+     <!-- Interpolating. -->
+    <h3 class="title is-4">360 Rendering</h3>
+    <div class="columns is-vcentered interpolation-panel">
+
+      <div class="column interpolation-video-column">
+        <div id="interpolation-image-wrapper">
+          Loading...
+        </div>
+        <input class="slider is-fullwidth is-large is-info"
+               id="interpolation-slider"
+               step="1" min="0" max="71" value="0" type="range">
+      </div>
     </div>
-  </div>
+    <br/>
+    <!--/ Interpolating. -->
+    </div>
 </section>
+
+
 
 <section class="section">
   <div class="container is-max-desktop">
-    <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
+      <div class="column">
         <h2 class="title is-3">OverView</h2>
         <div class="content has-text-justified">
           <video id="teaser" autoplay muted loop playsinline height="100%">
@@ -240,7 +216,7 @@
         <h2 class="title is-3">Contact</h2>
         <div class="content has-text-justified">
           <p>
-            We are opened to discussion about data access and sharing. Feel free to contact by E-mail (jseob.y@polygom.xyz, mpark@polygom.xyz).
+            We are pleased to meet you! All discussions about data access and sharing are welcome. Feel free to contact by E-mail (jseob.y@polygom.xyz, mpark@polygom.xyz).
           </p>
         </div>
       </div>
